@@ -10,6 +10,7 @@ Landlock は、Linux カーネルのセキュリティモジュール (LSM) で�
 
 - [Landlock LSM](https://landlock.io/)
 - [参考記事](https://qiita.com/nekoaddict/items/39125b8cd01da08b6a91)
+- [x64 マシン用 WSL2 Linux カーネル更新プログラム パッケージ](https://wslstorestorage.blob.core.windows.net/wslblob/wsl_update_x64.msi)
 
 ## Getting Started
 
