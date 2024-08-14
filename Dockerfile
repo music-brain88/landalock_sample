@@ -36,5 +36,5 @@ RUN echo '#!/bin/bash' > /usr/local/bin/debug_and_run.sh && \
     chmod +x /usr/local/bin/debug_and_run.sh
 
 # コンテナ起動時にRustアプリケーションを実行
-#CMD ["./target/release/landalock_sample"]
-CMD ["./debug.sh"]
+CMD ["./target/release/landalock_sample"]
+#CMD ["./debug.sh"]
