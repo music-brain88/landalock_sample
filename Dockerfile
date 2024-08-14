@@ -10,9 +10,11 @@ RUN apt-get update && apt-get install -y libcap2-bin
 COPY Cargo.toml .
 COPY src/main.rs ./src/
 COPY test_landlock_script.sh .
+COPY debug.sh .
 
 # スクリプトに実行権限を付与
 RUN chmod +x test_landlock_script.sh
+RUN chmod +x debug.sh
 
 
 # テスト用のディレクトリを作成し、権限を設定
@@ -34,4 +36,5 @@ RUN echo '#!/bin/bash' > /usr/local/bin/debug_and_run.sh && \
     chmod +x /usr/local/bin/debug_and_run.sh
 
 # コンテナ起動時にRustアプリケーションを実行
-CMD ["./target/release/landalock_sample"]
+#CMD ["./target/release/landalock_sample"]
+CMD ["./debug.sh"]

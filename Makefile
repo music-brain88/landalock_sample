@@ -25,7 +25,7 @@ build:
 .PHONY: run
 run:
 	@echo "Running Docker container..."
-	$(DOCKER_RUN) $(DOCKER_CAP_ADD) --name $(CONTAINER_NAME) $(IMAGE_NAME):$(IMAGE_TAG)
+	$(DOCKER_RUN) --privileged $(DOCKER_CAP_ADD) --name $(CONTAINER_NAME) $(IMAGE_NAME):$(IMAGE_TAG)
 
 stop:
 	@echo "Stopping Docker container..."
