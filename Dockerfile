@@ -1,6 +1,11 @@
 # Rustの公式イメージをベースとして使用
 FROM rust:1.80
 
+
+# 必要なパッケージをインストール
+RUN apt-get update && apt-get install -y libcap2-bin
+
+
 # 必要なファイルをコンテナにコピー
 COPY Cargo.toml .
 COPY src/main.rs ./src/
